@@ -1,0 +1,45 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    }
+  },
+  "autoUpdatesChannel": "latest",
+  "Stop": [
+    {
+      "matcher": "*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "~/.claude/hooks/no-settle-lint.sh"
+        },
+        {
+          "type": "command",
+          "command": "~/.claude/hooks/taskmaster-check-completion.sh"
+        },
+        {
+          "type": "command",
+          "command": "~/.claude/hooks/verify-before-done.sh"
+        }
+      ]
+    }
+  ],
+  "PreToolUse": [
+    {
+      "matcher": "Bash",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "~/.claude/hooks/pre-commit-gate.sh"
+        }
+      ]
+    }
+  ]
+}
