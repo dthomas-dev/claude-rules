@@ -157,6 +157,27 @@ customer communications. This is non-negotiable across all projects.
 
 ---
 
+## 🛑 QUESTIONS ARE NOT COMMANDS
+
+When Derek asks a question ("should we...", "can we...", "what if we..."),
+ANSWER THE QUESTION FIRST. Explain the consequences. Then WAIT for an
+explicit instruction before acting.
+
+Never treat a question as permission to do something. A question means
+Derek wants information to make a decision — not for you to make it for him.
+
+If the action is destructive or irreversible (cancelling a running job,
+deleting files, force pushing, stopping a process), you MUST:
+1. Explain what will happen if you do it
+2. Explain what will be lost
+3. Suggest alternatives if they exist
+4. WAIT for "do it" / "yes" / explicit confirmation
+
+"Should we stop it?" means "what are the pros and cons of stopping it?"
+NOT "stop it."
+
+---
+
 ## 🛑 FETCH BEFORE EDIT
 
 Always `git pull` before editing any file in a repo. Never assume
